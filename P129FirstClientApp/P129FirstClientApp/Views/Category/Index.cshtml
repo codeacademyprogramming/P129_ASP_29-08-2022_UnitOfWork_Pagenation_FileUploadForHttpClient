@@ -1,0 +1,36 @@
+﻿@model PagenatedListVM<CategoryListVM>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>CategorList</h1>
+<div class="container-fluid">
+    <div class="row">
+        <a class="btn btn-primary" asp-controller="Category" asp-action="create">Create</a>
+    </div>
+    <div class="row">
+        <table class="table table-bordered table-striped table-active">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>IsMain</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model != null)
+                {
+                    foreach (CategoryListVM categoryListVM in Model.items)
+                    {
+                        <tr>
+                            <td>@categoryListVM.Id</td>
+                            <td>@categoryListVM.Name</td>
+                            <td>@categoryListVM.IsMain</td>
+                        </tr>
+                    }
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

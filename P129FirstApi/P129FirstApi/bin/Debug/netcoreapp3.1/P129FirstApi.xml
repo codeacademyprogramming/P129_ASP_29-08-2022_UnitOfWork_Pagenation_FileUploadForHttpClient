@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>P129FirstApi</name>
+    </assembly>
+    <members>
+        <member name="T:P129FirstApi.Controllers.CategoriesController">
+            <summary>
+            Category Controller
+            </summary>
+        </member>
+        <member name="M:P129FirstApi.Controllers.CategoriesController.#ctor(P129FirstApi.Data.AppDbContext,AutoMapper.IMapper,P129FirstApi.Interfaces.IJWTManager)">
+            <summary>
+            Categor Constructor
+            </summary>
+            <param name="context"></param>
+            <param name="mapper"></param>
+            <param name="jWTManager"></param>
+        </member>
+        <member name="M:P129FirstApi.Controllers.CategoriesController.Post(P129FirstApi.DTOs.CatagoryDTOs.CategoryPostDto)">
+            <summary>
+            Category Yaranmasi Ucun Service
+            </summary>
+            <param name="categoryPostDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:P129FirstApi.Controllers.CategoriesController.Get">
+            <summary>
+            Gets the list of all Categories.
+            </summary>
+            <returns>The list of Employees.</returns>
+        </member>
+        <member name="M:P129FirstApi.Controllers.CategoriesController.Put(System.Nullable{System.Int32},P129FirstApi.DTOs.CatagoryDTOs.CategoryPutDto)">
+            <summary>
+            Categoriyani Yenilemek Ucun Service
+            </summary>
+            <remarks>
+            Sample request:
+            
+                POST api/categories
+                {        
+                  "ad": "Mike",
+                  "esasdirmi": "Andrew",
+                  "aidOlduguUstCategoryId": "Mike.Andrew@gmail.com",
+                  "sekli":"Test.jpg"
+                }
+            </remarks>
+            <param name="id"></param>
+            <param name="categoryPutDto"></param>
+            <returns>A newly created employee</returns>
+            <response code="204">Updated Successfuly category</response>
+            <response code="400">If the item is null</response>  
+            <response code="404">If the item is NotFount</response>  
+            <response code="409">Name Is Alreade Exists</response>  
+        </member>
+        <member name="T:P129FirstApi.DTOs.CatagoryDTOs.CategoryPutDto">
+            <summary>
+            Categoriyani Yenilemek Ucun Object
+            </summary>
+        </member>
+        <member name="P:P129FirstApi.DTOs.CatagoryDTOs.CategoryPutDto.Id">
+            <summary>
+            Categoriyanin Id-si
+            </summary>
+        </member>
+    </members>
+</doc>
